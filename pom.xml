@@ -59,6 +59,12 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- Quartz -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-quartz</artifactId>
+    </dependency>
+
     <!-- Databases - Uses HSQL by default -->
     <dependency>
       <groupId>org.hsqldb</groupId>
