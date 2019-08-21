@@ -1,12 +1,18 @@
 dist: trusty
 language: java
 jdk: oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2
+  - target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
 jobs:
   include:
     - stage: build
       after_success:
         - bash <(curl -s https://codecov.io/bash)
     - stage: deploy
+      install: skip
+      script: skip
       deploy:
         provider: heroku
         api_key:
