@@ -9,6 +9,7 @@ after_script:
   - echo $HOME
   - ls -al $HOME/.m2
   - echo $TRAVIS_BUILD_DIR
+  - ls -al $TRAVIS_BUILD_DIR/target
   - ls -al target
 jobs:
   include:
