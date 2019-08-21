@@ -4,7 +4,7 @@ jdk: oraclejdk8
 cache:
   directories:
   - $HOME/.m2
-  #- target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+  - target
 after_script:
   - echo $HOME
   - ls -al $HOME/.m2
