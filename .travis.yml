@@ -1,10 +1,14 @@
 dist: trusty
 language: java
 jdk: oraclejdk8
-after_success:
-- bash <(curl -s https://codecov.io/bash)
-deploy:
-  provider: heroku
-  api_key:
-    secure: xL22yJdwFxW0UNTWQiiSF490FHTLHSvl04XmUAyeLFaNl0Njj0uf+5JcIsAx0xqXjK5WSVMESVhgqWfXRMDH7GDMBKB+mbDN771Z+ts8A1BtLAcQ0IUXn2xjNhKsk+UBU4glscqKCS9JI+dJ3ubG8iVmGVBF2V7CkLSuS9GXbyp6xxSUQD5u6+tj+brQGitys9ZUup8tKcAybSk1mVZqyzUc7Osm0jkpXUkDFGNBHhuhb2glRE2CYaF7urVn6vMjlPL0J/dBBsgVpdjgaIYdtd4y1fNroaG4IUV8yU0LETbsQgnwMZMnIhlHW4gn7ApUR4UqsrKk9eUH1yqezWnmk5iZ4uHdDCRkyaBZf0Ngk6l+QaFFEsxDrV0spJlRRlqrcOZOyLosUJXCCWoH55jfFesC2hmf+CsnxsALKTtP9v5O3a5dHGmlnwCGJd4/Zd2JrdxoRqBLchofVI7JBN1/q2BeqHkbIGy7BC6yOWbu9TH/TNsSRsxjXbNOWUOmh7WYtjl86kSMj7K3expzD6bWjDHVxQPkMGS8tx59R0e9j2tc+VJxZPlNNeAu5MSOSzdxpzQyJBfbVPdpXjX6Y03TFhIydnhfUH6grBWy3ln47s00+fyfi6rMC/oNIzklXSWdQDx3ujBftu+GPdAEWsY/TTypLIX1yIHfLWsOJT6jo3k=
-  app: github-spring-petclinic
+jobs:
+  include:
+    - stage: build
+    after_success:
+      - bash <(curl -s https://codecov.io/bash)
+    - stage: deploy
+    deploy:
+      provider: heroku
+      api_key:
+        secure: xL22yJdwFxW0UNTWQiiSF490FHTLHSvl04XmUAyeLFaNl0Njj0uf+5JcIsAx0xqXjK5WSVMESVhgqWfXRMDH7GDMBKB+mbDN771Z+ts8A1BtLAcQ0IUXn2xjNhKsk+UBU4glscqKCS9JI+dJ3ubG8iVmGVBF2V7CkLSuS9GXbyp6xxSUQD5u6+tj+brQGitys9ZUup8tKcAybSk1mVZqyzUc7Osm0jkpXUkDFGNBHhuhb2glRE2CYaF7urVn6vMjlPL0J/dBBsgVpdjgaIYdtd4y1fNroaG4IUV8yU0LETbsQgnwMZMnIhlHW4gn7ApUR4UqsrKk9eUH1yqezWnmk5iZ4uHdDCRkyaBZf0Ngk6l+QaFFEsxDrV0spJlRRlqrcOZOyLosUJXCCWoH55jfFesC2hmf+CsnxsALKTtP9v5O3a5dHGmlnwCGJd4/Zd2JrdxoRqBLchofVI7JBN1/q2BeqHkbIGy7BC6yOWbu9TH/TNsSRsxjXbNOWUOmh7WYtjl86kSMj7K3expzD6bWjDHVxQPkMGS8tx59R0e9j2tc+VJxZPlNNeAu5MSOSzdxpzQyJBfbVPdpXjX6Y03TFhIydnhfUH6grBWy3ln47s00+fyfi6rMC/oNIzklXSWdQDx3ujBftu+GPdAEWsY/TTypLIX1yIHfLWsOJT6jo3k=
+      app: github-spring-petclinic
