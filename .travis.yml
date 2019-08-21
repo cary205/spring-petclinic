@@ -4,7 +4,11 @@ jdk: oraclejdk8
 cache:
   directories:
   - $HOME/.m2
-  - target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+  #- target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+after_script:
+  - echo $HOME
+  - ls -al $HOME/.m2
+  - ls -al ./target
 jobs:
   include:
     - stage: build
