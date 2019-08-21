@@ -4,7 +4,7 @@ jdk: oraclejdk8
 cache:
   directories:
     - $HOME/.m2
-    - target
+    # - target
 after_script:
   - echo $HOME
   - ls -al $HOME/.m2
