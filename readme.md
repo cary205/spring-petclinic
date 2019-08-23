@@ -1,7 +1,7 @@
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.com/cary205/spring-petclinic.svg?branch=master)](https://travis-ci.com/cary205/spring-petclinic)[![codecov](https://codecov.io/gh/cary205/spring-petclinic/branch/master/graph/badge.svg)](https://codecov.io/gh/cary205/spring-petclinic)
 Deploy this sample application to Pivotal Web Services:
 <a href="https://push-to.cfapps.io?repo=https%3A%2F%2Fgithub.com%2Fspring-projects%2Fspring-petclinic.git">
-    <img src="https://push-to.cfapps.io/ui/assets/images/Push-to-Pivotal-Dark.svg" width="130" alt="Push" align="top">
+    <img src="https://push-to.cfapps.io/ui/assets/images/Push-to-Pivotal-Light-with-Shadow.svg" width="130" alt="Push" align="top">
 </a>
 
 ## Understanding the Spring Petclinic application with a few diagrams
