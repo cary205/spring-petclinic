@@ -5,5 +5,5 @@ steps:
 - name: test
   image: java:8
   commands:
-  - /mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - /mvnw test -B
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - ./mvnw test -B
