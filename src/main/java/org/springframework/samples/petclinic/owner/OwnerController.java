@@ -70,6 +70,11 @@ class OwnerController {
 
     @GetMapping("/owners/find")
     public String initFindForm(Map<String, Object> model) {
+        return "redirect:/owners/find/";
+    }
+
+    @GetMapping("/owners/find/")
+    public String initFindForm2(Map<String, Object> model) {
         model.put("owner", new Owner());
         return "owners/findOwners";
     }
